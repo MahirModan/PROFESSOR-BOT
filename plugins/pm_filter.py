@@ -63,7 +63,7 @@ async def pm_next_page(bot, query):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'pmfile#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
             
-    btn.append(
+    btn.insert(0,
             [InlineKeyboardButton(text="A2 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ", url='https://t.me/How_to_Download_From_Search_Bot/2')]
         )
     
@@ -150,7 +150,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{file.file_id}')] for file in files ]
             
-    btn.append(
+    btn.insert(0,
             [InlineKeyboardButton(text="GP Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ", url='https://t.me/How_to_Download_From_Search_Bot/2')]
         )
     
